@@ -1,0 +1,63 @@
+<!-- <link rel="import" href="../../bower_components/polymer/polymer.html"> -->
+<link rel="import" href="./home-styles.html">
+
+<dom-module id="home-element">
+	<template>
+
+		<style include="home-styles"></style>
+
+		<section class="colorpanel home-bg"><h2 class="section-title">CORNY HEADLINE</h2></section>
+		<section class="colorpanel orange">
+			<h3>You claim your story isn't cute...</h3>
+			<p>
+				...so idk what to put here yet - let's talk about it. Until then you get some bacon ipsum
+			</p>
+			<p>
+				Bacon ipsum dolor amet irure qui elit quis laboris sed consequat deserunt capicola short ribs magna doner. Spare ribs lorem shankle, eiusmod duis jowl sed occaecat esse burgdoggen cow. Picanha ground round ball tip sausage. Tongue esse meatball ex mollit, picanha brisket velit ground round ullamco buffalo. Ea dolore minim in, sausage laboris cillum duis veniam cow ground round fatback consectetur kielbasa laborum. Deserunt short ribs excepteur, tongue tri-tip sausage salami cow elit est.
+			</p>
+		</section>
+		<section class="colorpanel red"><h2 class="section-title">HE PROPOSED</h2></section>
+		<section class="colorpanel break">
+			<!-- <h2 class="section-title">I NEED SOMETHING HERE FOR WHITESPACE</h2> -->
+			<h3>Maybe some more corny shit...</h3>
+			<p>
+				...but for now, SPICY bacon ipsum!
+			</p>
+			<p>
+				Spicy jalapeno bacon ipsum dolor amet porchetta bacon andouille pig. Pastrami shank doner pig picanha. Fatback ham prosciutto short ribs, landjaeger porchetta buffalo pastrami shankle doner beef rump meatloaf capicola spare ribs. Drumstick shoulder beef ham hock. T-bone doner short ribs, bresaola buffalo beef ribs boudin drumstick spare ribs frankfurter strip steak turkey kevin biltong jowl.
+			</p>
+			<p>
+				Pork chicken meatloaf, brisket short ribs hamburger turkey t-bone sausage pancetta salami filet mignon jerky short loin. Swine bresaola shankle beef ribs turducken ham ground round meatball kielbasa sausage rump drumstick short ribs brisket.
+			</p>
+			<h3>And...</h3>
+		</section>
+		<section class="colorpanel yellow"><h2 class="section-title">SHE SAID YES</h2></section>
+		<section class="colorpanel footer">
+			<!-- <h2 class="section-title">THIS IS A FOOTER</h2> -->
+			<div class="cont-wrap">
+				<a href="http://www.slynnphotography.com/"  target="_blank"><img srcset="../../img/slyn.jpg 1x, ../../img/slyn-2x.jpg 2x" alt="…" /></a>
+				<span>All photography provided by <a href="http://www.slynnphotography.com/"  target="_blank">Sara Dinwiddie</a>.
+				</span>
+			</div>
+			<br/><br/>
+			<span>Website by Chris Murone</span>
+		</section>
+
+	</template>
+
+	<script>
+		Polymer({
+
+			is: 'home-element',
+
+			properties: {
+				prop1: {
+					type: String,
+					value: 'home',
+				}
+			},
+			observers: [
+			]
+		});
+	</script>
+</dom-module>
