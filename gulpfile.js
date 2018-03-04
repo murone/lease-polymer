@@ -91,7 +91,8 @@ gulp.task('build', function(cb) {
 
 /* Dist task */
 gulp.task('dist', function(cb) {
-		runSequence('build', 'img', 'polybuild', 'vulcanize');
+		// runSequence('build', 'img', 'polybuild', 'vulcanize');
+		runSequence('build', 'img', 'polybuild');
 
 });
 
@@ -161,7 +162,7 @@ gulp.task('responsive-people', function () {
 			// Resize all JPG images to five different sizes: 400, 810, 1280, 1920, and original size for 2x screens.
 			'*.jpg': [{
 				width: 200,
-			}, 
+			},
 			// {
 			//   width: 200 * 2,
 			//   rename: { suffix: '-2x' },
@@ -193,7 +194,7 @@ gulp.task('responsive-dress', function () {
 			// Resize all JPG images to five different sizes: 400, 810, 1280, 1920, and original size for 2x screens.
 			'*.jpg': [{
 				width: 548,
-			}, 
+			},
 			// {
 			//   width: 200 * 2,
 			//   rename: { suffix: '-2x' },

@@ -12,7 +12,7 @@
 
 <dom-module id="wedding-polymer-app">
 	<template>
-		
+
 		<style include="app-styles"></style>
 
 		<app-location route="{{route}}"></app-location>
@@ -21,48 +21,53 @@
 		<paper-header-panel scroller id="hp" mode="waterfall-tall" class="cyan header-panel" tall-class="tall">
 			<div class="paper-header">
 				<header class="full-height">
-					<div class="heading-wrap">
-						<a href="/"><h1 class="main-title">CHRIS&nbsp;<iron-icon class="header-icon" icon="fa:fa-heart">+</iron-icon>&nbsp;ASHLEY</h1></a>
-					</div>
-					<nav class="main-nav">
+					<nav class="main-nav left-nav">
 						<ul class="nav-ul">
-							<li class="nav-li" id="our-story">
-								<a class="nav-a" href="/our-story"><span>OUR STORY</span></a>
+							<li class="nav-li" id="home">
+								<a class="nav-a" href="/home"><span>HOME</span></a>
 							</li>
-							<li class="nav-li" id="when-where">
-								<a class="nav-a" href="/when-where"><span>WHEN &AMP; WHERE</span></a>
+							<li class="nav-li" id="details">
+								<a class="nav-a" href="/details"><span>DETAILS</span></a>
 							</li>
-							<li class="nav-li" id="whos-who">
-								<a class="nav-a" href="/whos-who"><span>WHO&apos;S WHO</span></a>
-							</li>
-							<li class="nav-li" id="registry">
-								<a class="nav-a" href="/registry"><span>REGISTRY</span></a>
+						</ul>
+					</nav>
+					<div class="heading-wrap">
+						<a href="/"><h1 class="main-title">SARAH&nbsp;<iron-icon class="header-icon" icon="fa:fa-heart">+</iron-icon>&nbsp;KEVIN</h1></a>
+					</div>
+					<nav class="main-nav right-nav">
+						<ul class="nav-ul">
+							<li class="nav-li" id="getting-there">
+								<a class="nav-a" href="/getting-there"><span>GETTING THERE</span></a>
 							</li>
 							<li class="nav-li" id="rsvp">
 								<a class="nav-a" href="/rsvp"><span>RSVP</span></a>
 							</li>
-							<li class="nav-li" id="nitty-gritty">
-								<a class="nav-a" href="/nitty-gritty"><span>NITTY GRITTY</span></a>
-							</li>
-						</ul> 
+						</ul>
 					</nav>
 				</header>
 			</div>
 
 			<iron-pages selected="[[routeData.page]]" attr-for-selected="id">
-				
+
 				<!-- *********************************************** -->
 				<!-- ***************OUR STORY SECTION*************** -->
 				<!-- *********************************************** -->
-				<div id="our-story" class="ipage">
-					<our-story></our-story>
+				<div id="home" class="ipage">
+					<home-element></home-element>
 				</div>
 
 				<!-- ************************************************ -->
-				<!-- ***************WHEN-WHERE SECTION*************** -->
+				<!-- ***************details SECTION*************** -->
 				<!-- ************************************************ -->
-				<div id="when-where" class="ipage">
-					<when-where></when-where>
+				<div id="details" class="ipage">
+					<details-element></details-element>
+				</div>
+
+				<!-- ************************************************ -->
+				<!-- ****************GETTING-THERE SECTION**************** -->
+				<!-- ************************************************ -->
+				<div id="getting-there" class="ipage">
+					<getting-there></getting-there>
 				</div>
 
 				<!-- ************************************************ -->
@@ -117,7 +122,7 @@
 				// console.log(this.routeData.page);
 
 				page('/', () => {
-					page.redirect('/our-story');
+					page.redirect('/home');
 				});
 
 				page({
@@ -125,13 +130,13 @@
 				});
 
 				// if (this.route.path == "/"){
-				// 	this.set('route.path', '/our-story');
+				// 	this.set('route.path', '/home');
 				// }
-				if (this.route.path == "/our-story/"){
-					this.set('route.path', '/our-story');
+				if (this.route.path == "/home/"){
+					this.set('route.path', '/home');
 				}
-				if (this.route.path == "/when-where/"){
-					this.set('route.path', '/when-where');
+				if (this.route.path == "/details/"){
+					this.set('route.path', '/details');
 				}
 				if (this.route.path == "/registry/"){
 					this.set('route.path', '/registry');

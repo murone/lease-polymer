@@ -2,7 +2,7 @@ $headingcolor: black;
 $mint: #AAF0D1;
 
 * {
-	font-family: 'Slabo 27px', serif;
+	font-family: 'Lora', serif;
 	box-sizing: border-box;
 }
 
@@ -47,7 +47,7 @@ header{
 
 /*//////////////TITLE AREA//////////////*/
 h1{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Crimson Text', serif;
 	font-variant: small-caps;
 	font-weight: 300;
 	letter-spacing: .2em;
@@ -62,6 +62,7 @@ h1{
 	justify-content: center;
 	height: 3em;
 	width: 100%;
+	order: 0;
 }
 .heading-wrap a{
 	display: flex;
@@ -90,8 +91,22 @@ h1{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 6em;
+	height: 3em;
 	width: 100%;
+}
+.left-nav{
+	order: 1;
+}
+.right-nav{
+	order: 3;
+}
+.left-nav ul{
+	padding-bottom: 0;
+	justify-content: flex-end;
+}
+.right-nav ul{
+	padding-top: 0;
+	justify-content: flex-start;
 }
 .nav-ul{
 	display: flex;
@@ -117,7 +132,7 @@ h1{
 	vertical-align: middle;
 	text-align: center;
 	vertical-align: middle;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Crimson Text', serif;
 	font-variant: small-caps;
 	text-decoration: none;
 	font-weight: 300;
@@ -126,7 +141,7 @@ h1{
 	color: $headingcolor;
 }
 .nav-a span{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Crimson Text', serif;
 }
 
 
@@ -145,7 +160,7 @@ section{
 }
 
 h2{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Crimson Text', serif;
 	font-variant: small-caps;
 	font-weight: 300;
 	letter-spacing: .2em;
@@ -155,7 +170,7 @@ h2{
 }
 
 h3{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Crimson Text', serif;
 	font-variant: small-caps;
 	font-weight: 300;
 	letter-spacing: .2em;
@@ -165,7 +180,7 @@ h3{
 }
 
 h4{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Crimson Text', serif;
 	font-variant: small-caps;
 	font-weight: 300;
 	letter-spacing: .2em;
@@ -192,7 +207,7 @@ iron-pages {
 	align-items: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center center;	
+	background-position: center center;
 }
 .colorpanel span{
 	width: 100%;
@@ -217,7 +232,7 @@ iron-pages {
 
 /*//////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////*/
-/*////////////////TINY-SCREEN BREAKPOINT////////////////*/ 
+/*////////////////TINY-SCREEN BREAKPOINT////////////////*/
 /*//////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////*/
 @media screen and (max-width: 400px){
@@ -228,10 +243,10 @@ iron-pages {
 
 
 
- 
+
 /*//////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////*/
-/*//////////////////DESKTOP BREAKPOINT//////////////////*/ 
+/*//////////////////DESKTOP BREAKPOINT//////////////////*/
 /*//////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////*/
 
@@ -258,17 +273,18 @@ iron-pages {
 		/*font-size: 2em;*/
 	}
 	.heading-wrap{
-		width: 30%;
-		align-items: center;
+		width: auto;
+		align-items: space;
 		justify-content: center;
 		height: 2.5em;
+		order: 2;
+		padding: 0 5%;
 	}
 	.main-title{
-		padding-left: 10%;
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
-		justify-content: left;
+		justify-content: center;
 		width: 100%;
 	}
 
@@ -278,19 +294,31 @@ iron-pages {
 	/*//////////////NAV AREA//////////////*/
 	.main-nav{
 		flex-direction: row;
-		justify-content: flex-end;
+		justify-content: center;
 		align-items: center;
 		height: 2.5em;
-		width: 70%;
-		/*background-color: lightgray;*/
+		width: 25%;
+		flex-grow: 1
+	}
+	.left-nav{
+		order: 1;
+	}
+	.right-nav{
+		order: 3;
+	}
+	.left-nav ul, .right-nav ul{
+		padding-bottom: .5em;
+		justify-content: space-around;
 	}
 	.nav-ul{
 		display: flex;
 		flex-direction: row;
 		/*ertical-align: middle;*/
 		align-items: center;
+		justify-content: space-around;
 		list-style: none;
 		line-height: 100%;
+		width: 100%;
 	}
 	.nav-li{
 		vertical-align: middle;
@@ -306,7 +334,7 @@ iron-pages {
 		vertical-align: middle;
 	}
 	.nav-a span{
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Crimson Text', serif;
 	}
 
 
@@ -328,7 +356,7 @@ iron-pages {
 		align-items: center;
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: center center;	
+		background-position: center center;
 	}
 	.colorpanel span{
 		width: 100%;
@@ -407,7 +435,7 @@ iron-pages {
 	-webkit-font-smoothing: antialiased;
 	/*Responsive Images*/
 
-	/*//////////////WHEN-WHERE-CONTENT//////////////*/
+	/*//////////////details-CONTENT//////////////*/
 	.registry{
 		background-image: url(../../img/bg-registry-original.jpg);
 	}
